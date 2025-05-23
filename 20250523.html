@@ -22,8 +22,7 @@ body { margin: 0; overflow: hidden; }
     >
     <!-- 載入影片資源（要與 HTML 放在同一目錄） -->
     <a-assets>
-    <video id="introVid" src="camping.mp4
-" preload="auto" loop muted></video>
+    <video id="introVid" src="camping.mp4" preload="auto" loop muted></video>
     </a-assets>
     <!-- 環境光線，避免影片太暗 -->
     <a-light type="ambient" intensity="1.5"></a-light>
@@ -42,16 +41,13 @@ body { margin: 0; overflow: hidden; }
     </a-video>
     </a-entity>
     </a-scene>
-    <!-- 點擊播放 / 暫停的互動邏輯 -->
 <script>
-    // 取得影片 DOM 與影片平面實體
     const video = document.querySelector('#introVid');
     const videoPlane = document.querySelector('#videoEntity');
-    // 取得包含 mindar-image-target 屬性的實體，對它監聽 targetFound 事件
     const targetEntity = document.querySelector('a-entity[mindar-image-target]');
-    // （可選）保留點擊切換播放／暫停功能
+
     videoPlane.addEventListener('click', () => {
-    if (video.paused) {
+    IF(video.paused) {
     video.play();
     } else {
     video.pause();
