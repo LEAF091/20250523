@@ -42,12 +42,11 @@ body { margin: 0; overflow: hidden; }
     </a-entity>
     </a-scene>
 <script>
-    const video = document.querySelector('#introVid');
-    const videoPlane = document.querySelector('#videoEntity');
-    const targetEntity = document.querySelector('a-entity[mindar-image-target]');
-
+    constvideo = document.querySelector('#introVid');
+    constvideoPlane = document.querySelector('#videoEntity');
+    consttargetEntity = document.querySelector('a-entity[mindar-image-target]');
     videoPlane.addEventListener('click', () => {
-    IF(video.paused) {
+    if(video.paused) {
     video.play();
     } else {
     video.pause();
