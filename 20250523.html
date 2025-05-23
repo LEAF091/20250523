@@ -41,10 +41,14 @@ body { margin: 0; overflow: hidden; }
     </a-video>
     </a-entity>
     </a-scene>
+    <!-- 點擊播放 / 暫停的互動邏輯 -->
 <script>
-    constvideo = document.querySelector('#introVid');
-    constvideoPlane = document.querySelector('#videoEntity');
-    consttargetEntity = document.querySelector('a-entity[mindar-image-target]');
+    // 取得影片 DOM 與影片平面實體
+    const video = document.querySelector('#introVid');
+    const videoPlane = document.querySelector('#videoEntity');
+    // 取得包含 mindar-image-target 屬性的實體，對它監聽 targetFound 事件
+    const targetEntity = document.querySelector('a-entity[mindar-image-target]');
+    // （可選）保留點擊切換播放／暫停功能
     videoPlane.addEventListener('click', () => {
     if (video.paused) {
     video.play();
